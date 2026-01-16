@@ -1,10 +1,27 @@
+body {
+    margin:0;
+    padding: 16px;
+}
+
+#bigDisplay,
+#thumbnails,
+#Buttoncontrols {
+  max-width: 100%;
+}
+
+#bigDisplay {
+  width: 100%;
+}
 #thumbnails {
-  height: 20vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+
 }
 
 #thumbnails img {
@@ -47,4 +64,16 @@
 #Buttoncontrols button:focus {
   outline: 3px solid #7aa874;
   outline-offset: 2px;
+}
+
+@media(max-width:600px){
+    #thumbnails img {
+  height: 100%;
+  max-height: 50px;
+  width: auto;
+  object-fit: cover;
+  cursor: pointer;
+padding-bottom: 8px;
+}
+    
 }

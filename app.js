@@ -77,6 +77,25 @@ nextBtn.addEventListener("click", function () {
   }
     showImageByIndex(newIndex);
 });
-
-
 showImageByIndex(0);
+
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowLeft"){
+        let newIndex = currentIndex -1;
+
+        if (newIndex<0){
+            newIndex = images.length -1;
+        }
+        showImageByIndex(newIndex);
+    }
+    if (event.key=== "ArrowRight"){
+        let newIndex = currentIndex +1;
+
+    if (newIndex >= images.length) {
+        newIndex = 0;
+    }
+showImageByIndex(newIndex);
+}
+    
+});
