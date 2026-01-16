@@ -35,6 +35,7 @@ function createBigImage(imageData) {
   bigImage.src = imageData.src;
   bigImage.alt = imageData.alt;
 
+
   bigDisplay.append(bigImage);
 }
 
