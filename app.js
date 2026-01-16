@@ -30,11 +30,21 @@ function createThumbnails() {
 
     imgElement.addEventListener("click", function () {
       console.log(images[i]);
-      // big image will go here next
+      createBigImage(images[i])
+      
     });
 
     thumbnailsContainer.append(imgElement);
   }
 }
-
 createThumbnails();
+
+function createBigImage(imageData){
+    bigDisplay.innerHTML= ""
+    const bigImage= document.createElement("img")
+
+    bigImage.src= imageData.src
+    bigImage.alt= imageData.alt
+
+    bigDisplay.append(bigImage)
+}
